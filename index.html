@@ -3,33 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
+    <title>DAWN Node Connector</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Rock-Paper-Scissors</h1>
-            <p>Choose your move and beat the computer!</p>
+            <h1>DAWN Node Connector</h1>
+            <p>Match network nodes to build Dawn's decentralized broadband!</p>
         </header>
         <div class="game-area">
-            <div class="scores">
-                <p>Player Score: <span id="player-score">0</span></p>
-                <p>Computer Score: <span id="computer-score">0</span></p>
-                <p>Ties: <span id="ties">0</span></p>
+            <div class="stats">
+                <p>Moves: <span id="moves">0</span></p>
             </div>
-            <div class="choices">
-                <button id="rock">Rock</button>
-                <button id="paper">Paper</button>
-                <button id="scissors">Scissors</button>
-            </div>
-            <div class="result">
-                <p id="result-message"></p>
-            </div>
-            <button id="reset">Reset Game</button>
+            <div class="game-board" id="game-board"></div>
+            <div id="result-message"></div>
+            <button id="reset-btn">Reset Network</button>
         </div>
         <footer>
-            <p>A simple game like Tic-Tac-Toe, but with a twist of chance and strategy.</p>
+            <p>Powered by @dawninternet - Decentralized Broadband</p>
         </footer>
     </div>
     <script src="script.js"></script>
