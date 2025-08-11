@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background: linear-gradient(to bottom, #FFDAB9, #FF8C00); /* Dawn's orange gradient */
+    color: #000000; /* Black text */
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,34 +14,50 @@ body {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 00, 0, 0.2);
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 }
 
 header h1 {
-    color: #007bff;
+    color: #FF8C00; /* Dawn's primary orange */
     margin: 0;
 }
 
-.scores {
+.stats {
     margin: 10px 0;
 }
 
-.choices button {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-.choices button:hover {
-    opacity: 0.9;
+.card {
+    width: 80px;
+    height: 80px;
+    background: #00BFFF; /* Dawn's blue for connectivity */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card.flipped, .card.matched {
+    background: #FF8C00; /* Orange when flipped/matched */
+    color: #000000;
+}
+
+.card.matched {
+    opacity: 0.8;
 }
 
 #result-message {
@@ -50,17 +66,17 @@ header h1 {
     min-height: 20px;
 }
 
-#reset {
-    background: #dc3545;
+#reset-btn {
+    background: linear-gradient(to right, #FF8C00, #FFDAB9); /* Dawn's gradient */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    font-size: 16px;
 }
 
-#reset:hover {
+#reset-btn:hover {
     opacity: 0.9;
 }
 
